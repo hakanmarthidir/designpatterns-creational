@@ -1,3 +1,4 @@
+using System;
 using abstract_factory_pattern;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -10,11 +11,22 @@ namespace tests
         public void FileManager_CreateFactory_Successfully()
         {
 
-            var fileManager = new FileManager(new DxfFileFactory());
-            fileManager.CreateFile("abcd/efg.dxf");
+            var platform = "dxf";
+            IFileFactory factory = null;
 
-            fileManager = new FileManager(new CadFileFactory());
-            fileManager.CreateFile("defg/abcd.cad");
+            if (platform == "dxf")
+            {
+                factory = new DxfFileFactory();
+            }
+            else if (platform == "cad")
+            {
+                factory = new CadFileFactory();
+            }
+
+            var fileManager = new FileManager(factory);
+            fileManager.CreateFile("sample");
+
+            Assert.IsTrue(factory is DxfFileFactory);
 
         }
     }

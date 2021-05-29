@@ -8,9 +8,9 @@
             this._fileFactory = fileFactory;
         }
 
-        public void CreateFile(string path)
+        public void CreateFile(string name)
         {
-            var file = this._fileFactory.CreateFile(path);
+            var file = this._fileFactory.CreateFile(name);
         }
     }
 

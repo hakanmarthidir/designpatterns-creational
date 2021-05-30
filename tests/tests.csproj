@@ -15,5 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\abstract-factory-pattern\abstract-factory-pattern.csproj" />
+    <ProjectReference Include="..\singleton-pattern\singleton-pattern.csproj" />
   </ItemGroup>
 </Project>

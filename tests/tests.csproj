@@ -19,5 +19,6 @@
     <ProjectReference Include="..\factory-pattern\factory-pattern.csproj" />
     <ProjectReference Include="..\builder-pattern\builder-pattern.csproj" />
     <ProjectReference Include="..\prototype-pattern\prototype-pattern.csproj" />
+    <ProjectReference Include="..\objectpool-pattern\objectpool-pattern.csproj" />
   </ItemGroup>
 </Project>
